@@ -1,0 +1,50 @@
+#version 410 core
+
+in vec2 texCoord;
+
+out vec4 color;
+
+uniform float zoom;
+
+void main()
+{
+	float x = texCoord.x;
+	float y = texCoord.y;
+	
+	float radius = length( texCoord );
+	float angle = atan( y / x );
+	
+	const vec4 blue = vec4(0,0,1,1);
+	const vec4 red = vec4(1,0,0,1);
+	const vec4 yellow = vec4(1,1,0,1);
+
+	const float blueRadius = 0.8;
+	const float OuterStarRadius = 0.6;
+	const float InnerStarRadius = 0.2;
+	if(radius > blueRadius)
+	{
+		color = blue;
+	}
+	else if ( radius > OuterStarRadius)
+	{
+	color = yellow;
+	}
+	else if( radius <= InnerStarRadius )
+	{
+		color = red;
+	}
+	else
+	{
+		angle = abs( radians( mod(angle, 72) - 36));
+		
+		vec2 A = vec2(OuterStarRadius, 0);
+		float theta = redians(36);
+		vec2 B = InnerStarRadius * vec2(cos(theta), sin(theta) );
+
+		float m = (B.y - A.y) / (B.x - A.x);
+		float b = m * A.x
+
+		float lineY = 
+		color = y < lineY ? red :;
+	}
+}

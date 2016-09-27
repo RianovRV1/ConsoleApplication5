@@ -1,0 +1,19 @@
+Nodes.h  : changed file path for default vert and frag files
+
+Angel.h  : added Algorithms to make the code work
+
+Shapes.h  : added a sphere, a cube, a set of vectors eminateing from the sphere called SphereLines, a LineQuad
+
+Traversals.h  : added draw calls for the above
+
+initshader.cpp  :  added a system pause so I could read errors printed in the console.
+
+Main.cpp  : changed the idle to have rotations change based on the amount of rotation made. 
+
+Line.vert/Line.frag : shader files for the SphereLines
+
+Default.vert/Default.frag : shaderfiles for the Sphere
+
+silver_texture.jpg  : Sphere texture file
+
+Smoke.jpg  : SphereLines texture;
